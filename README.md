@@ -1,11 +1,11 @@
 # CommaNumbers
 Impact Take Home test
 
- This is a program to Implement an Interface to produce a comma delimited list of numbers, grouping the numbers into a range when they are sequential.
+ This is a program to implement an interface to produce a comma delimited list of numbers, grouping the numbers into a range when they are sequential.
 
  Assumptions:
  I assume that there will be no duplicate values.
- I assume that the list must be sorter before execution (meaning if list was 34,33,32 it will count as being sequential).
+ I assume that the list must be sorted before execution (meaning if list was 34,33,32 it will count as being sequential).
 
  Additional Notes:
  Run the program.
