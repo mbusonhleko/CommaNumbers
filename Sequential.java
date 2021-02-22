@@ -54,6 +54,7 @@ public class Sequential implements NumberRangeSummarizer {
         }
         keyboard.close();
         answer = seq.summarizeCollection(col);
+        System.out.println(answer);
 
     }
 
@@ -73,12 +74,12 @@ public class Sequential implements NumberRangeSummarizer {
 
         int counter = 0;
         int colSize = input.size();
-        System.out.println("col: " + colSize);
+        // System.out.println("col: " + colSize);
         int[] myArrList = new int[colSize];
         for (int i = 0; i <= colSize - 1; i++) {
-            System.out.println("Array before: " + myArrList[counter]);
+            // System.out.println("Array before: " + myArrList[counter]);
             myArrList[counter] = (int) input.toArray()[counter];
-            System.out.println("Array after: " + myArrList[counter]);
+            // System.out.println("Array after: " + myArrList[counter]);
             counter++;
         }
 
@@ -90,15 +91,17 @@ public class Sequential implements NumberRangeSummarizer {
             while (++number2 < arrListLength && myArrList[number2] - myArrList[number2 - 1] == 1)
                 ;
             if (number2 - number > 2) {
-                System.out.printf("%s-%s,", myArrList[number], myArrList[number2 - 1]);
+                // System.out.printf("%s-%s,", myArrList[number], myArrList[number2 - 1]);
+                answer = answer + String.format("%s-%s,", myArrList[number], myArrList[number2 - 1]);
                 number = number2;
             } else {
                 for (; number < number2; number++)
-                    System.out.printf("%s,", myArrList[number]);
+                    answer = answer + String.format("%s,", myArrList[number]);
+                // System.out.printf("%s,", myArrList[number]);
             }
         }
 
-        return null;
+        return answer;
     }
 
 }
