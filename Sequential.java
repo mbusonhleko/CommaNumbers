@@ -27,6 +27,14 @@ interface NumberRangeSummarizer {
 
 }
 
+/**
+ * The Sequential program implements the NumberRangeSummarizer in order to
+ * produce a comma delimited list of numbers, grouping the numbers into a range
+ * when they are sequential.
+ *
+ * @author Dian van Deventer
+ */
+
 public class Sequential implements NumberRangeSummarizer {
     private Collection<Integer> col;
     private String answer;
@@ -64,14 +72,30 @@ public class Sequential implements NumberRangeSummarizer {
 
         keyboard.close();
         seq.answer = seq.summarizeCollection(seq.col);
-        System.out.println(seq.answer);
+        StringBuffer sBuff = new StringBuffer(seq.answer);
+        sBuff.deleteCharAt(sBuff.length() - 1);
+        System.out.println(sBuff);
     }
+
+    /**
+     * Get number values to return a collection of type integer
+     * 
+     * @param {String} input - The number values entered via the user
+     * @return Collection of type integers
+     */
 
     @Override
     public Collection<Integer> collect(String input) {
         this.col.add(Integer.parseInt(input));
         return this.col;
     }
+
+    /**
+     * Use a collection of type integer to return a comma delimited string
+     * 
+     * @param {Collection<Integer>} input - Collection of integers
+     * @return Comma delimited string
+     */
 
     @Override
     public String summarizeCollection(Collection<Integer> input) {
