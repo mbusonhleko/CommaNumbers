@@ -5,7 +5,7 @@ Impact Take Home test
 
  Assumptions:
  I assume that there will be no duplicate values.
- I assume that the list must be sorter before execution (meaning if list was 34,33.32 it will count as being sequential).
+ I assume that the list must be sorter before execution (meaning if list was 34,33,32 it will count as being sequential).
 
  Additional Notes:
  Run the program.
