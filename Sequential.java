@@ -15,6 +15,16 @@ import java.util.Collection;
  *
  *         The code will be evaluated on - functionality - style - robustness -
  *         best practices - unit tests
+
+
+ * Notes from Reviewer:
+ * - you created a package and then only stuck the provided interface in there... all your files should be within this package
+ * - duplicated the provided interface code in your implementation. DRY -> Don't Repeat Yourself
+ * - Bundling 2 classes in one file ..
+ * - No unit tests. Not even an attempt. This was a hard requirement.
+ * - Your assumptions in the readme should be part of your unit tests.
+ * - Code not written in Java 8. This was also a requirement, though maybe not as hard as the unit tests.
+ * - Your implementation itself is actually quite good. Sanitizing input, sorting, etc. Such a shame about the rest!
  */
 
 interface NumberRangeSummarizer {
